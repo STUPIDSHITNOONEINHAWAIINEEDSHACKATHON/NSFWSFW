@@ -1,14 +1,33 @@
 /*jshint esversion: 6 */
+function picListener(data) {
 
-function picListener() {
+  let oReq = new XMLHttpRequest();
+  oReq.addEventListener('load', getPics);
+  oReq.open('GET', 'https://www.reddit.com/r/SFWporn/.json');
+  oReq.send();
 
-  var myData = JSON.parse(this.responseText);
-  myData = myData.data.children;
+  function getPics(){
+    var myData = JSON.parse(this.responseText);
+    myData = myData.data.children;
+    var picsArray = [];
 
-  console.log(myData);
+    for (var i = 0; i < myData.length; i++) {
+      // console.log(myData[i].data.url);
+      if(myData[i].data.url.toString().includes('reddituploads.com')){
+        // console.log('reddituploads: ', myData[i].data.url);
+        var redditUpLoadsURL = myData[i].data.url.split('amp;').join('');
+        // console.log(redditUpLoadsURL);
+        picsArray.push(redditUpLoadsURL);
+      } else {
+        var URL = myData[i].data.url;
+        // console.log(URL);
+        picsArray.push(URL);
+      }
+    }
+    console.log(picsArray);
+    console.log(picsArray.length);
+  }
 }
 
-let oReq = new XMLHttpRequest();
-oReq.addEventListener('load', picListener);
-oReq.open('GET', 'https://www.reddit.com/r/SFWporn/.json');
-oReq.send();
+picListener();
+
