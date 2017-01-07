@@ -5,7 +5,7 @@ function picListener() {
   var myData = JSON.parse(this.responseText);
   myData = myData.data.children;
 
-
+  console.log(myData);
 }
 
 let oReq = new XMLHttpRequest();
