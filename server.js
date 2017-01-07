@@ -7,17 +7,34 @@ const app = express();
 
   app.get('/', function (req, res) {
     res.sendFile( __dirname + '/public/age.html')
-
   });
 
-    app.get('/public/index.html', function (req, res) {
+  app.get('/public/index.html', function (req, res) {
     res.sendFile( __dirname + '/public/index.html')
-
   });
 
-    app.get('/public/404.html', function (req, res) {
+  app.get('/public/404.html', function (req, res) {
     res.sendFile( __dirname + '/public/404.html')
+  });
 
+  app.get('/public/css/app.css', function (req, res) {
+    res.sendFile( __dirname + '/public/css/app.css')
+  });
+
+  app.get('/public/js/app.js', function (req, res) {
+    res.sendFile( __dirname + '/public/js/app.js')
+  });
+
+  app.get('/public/js/pics.js', function (req, res) {
+    res.sendFile( __dirname + '/public/js/pics.js')
+  });
+
+  app.get('/public/js/title.js', function (req, res) {
+    res.sendFile( __dirname + '/public/js/title.js')
+  });
+
+  app.get('/public/js/comments.js', function (req, res) {
+    res.sendFile( __dirname + '/public/js/comments.js')
   });
 
   app.post( '/', function (req, res) {
