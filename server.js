@@ -6,8 +6,18 @@ const app = express();
   app.use(bodyParser.urlencoded());
 
   app.get('/', function (req, res) {
+    res.sendFile( __dirname + '/public/age.html')
+
+  });
+
+    app.get('/public/index.html', function (req, res) {
+    res.sendFile( __dirname + '/public/index.html')
+
+  });
+
+    app.get('/public/404.html', function (req, res) {
     res.sendFile( __dirname + '/public/404.html')
-    // res.end();
+
   });
 
   app.post( '/', function (req, res) {
