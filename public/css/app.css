@@ -14,29 +14,40 @@ body {
     width: 25%;
     height: 25px; }
 
-#postTitle {
-  background-color: purple; }
-
-#postContent {
-  background-color: yellow; }
-
-#generate {
-  background-color: lime; }
+#left {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start; }
+  #left #postTitle {
+    background-color: purple;
+    flex: 0 0 auto;
+    order: 1;
+    width: 10%; }
+  #left #postContent {
+    background-color: yellow;
+    flex: 0 0 auto;
+    order: 2;
+    width: 10%; }
+  #left #generate {
+    background-color: lime;
+    flex: 0 0 auto;
+    order: 3;
+    width: 10%; }
 
 #content {
-  background-color: blue; }
-
-#title {
-  background-color: red; }
-
-#img {
-  background-color: orange; }
-
-#author {
-  background-color: brown; }
-
-#comments {
-  background-color: orange; }
+  background-color: blue;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end; }
+  #content #title {
+    background-color: red; }
+  #content #img {
+    background-color: orange; }
+  #content #author {
+    background-color: brown; }
+  #content #comments {
+    background-color: orange; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
