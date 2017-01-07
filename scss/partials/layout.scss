@@ -18,34 +18,54 @@ body{
 	}
 }
 
-#postTitle{
-	background-color: purple;
-}
+#left{
+	background-color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 
-#postContent{
-	background-color: yellow;
-}
+	#postTitle{
+		background-color: purple;
+		flex: 0 0 auto;
+		order: 1;
+		width: 10%;
+	}
 
-#generate{
-	background-color: lime;
+	#postContent{
+		background-color: yellow;
+		flex: 0 0 auto;
+		order: 2;
+		width: 10%;
+	}
+
+	#generate{
+		background-color: lime;
+		flex: 0 0 auto;
+		order: 3;
+		width: 10%;
+	}
 }
 
 #content{
 	background-color: blue;
-}
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
 
-#title{
-	background-color: red;
-}
+	#title{
+		background-color: red;
+	}
 
-#img{
-	background-color: orange;
-}
+	#img{
+		background-color: orange;
 
-#author{
-	background-color: brown;
-}
+	}
 
-#comments{
-	background-color: orange;
+	#author{
+		background-color: brown;
+	}
+
+	#comments{
+		background-color: orange;
+	}
 }
