@@ -1,6 +1,19 @@
 body {
   background-color: pink; }
 
+#header {
+  background-color: green;
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px; }
+  #header h1 {
+    background-color: pink;
+    width: 25%;
+    height: 25px; }
+
 #postTitle {
   background-color: purple; }
 
@@ -12,6 +25,18 @@ body {
 
 #content {
   background-color: blue; }
+
+#title {
+  background-color: red; }
+
+#img {
+  background-color: orange; }
+
+#author {
+  background-color: brown; }
+
+#comments {
+  background-color: orange; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
