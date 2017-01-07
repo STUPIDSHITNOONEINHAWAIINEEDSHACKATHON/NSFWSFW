@@ -1,0 +1,71 @@
+body{
+	background-color: pink;
+}
+
+#header{
+	background-color: green;
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 75px;
+
+	h1{
+		background-color: pink;
+		width: 25%;
+		height: 25px;
+	}
+}
+
+#left{
+	background-color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+
+	#postTitle{
+		background-color: purple;
+		flex: 0 0 auto;
+		order: 1;
+		width: 10%;
+	}
+
+	#postContent{
+		background-color: yellow;
+		flex: 0 0 auto;
+		order: 2;
+		width: 10%;
+	}
+
+	#generate{
+		background-color: lime;
+		flex: 0 0 auto;
+		order: 3;
+		width: 10%;
+	}
+}
+
+#content{
+	background-color: blue;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+
+	#title{
+		background-color: red;
+	}
+
+	#img{
+		background-color: orange;
+
+	}
+
+	#author{
+		background-color: brown;
+	}
+
+	#comments{
+		background-color: orange;
+	}
+}
