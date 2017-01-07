@@ -17,10 +17,11 @@ function subLoader () {
 }
 
 function commentGenerator (){
-  let objParse = JSON.parse(this.responseText);
-  let arrayOfPosts = objParse.data.children;
-  
-  console.log(arrayOfPosts);
+  let arrayOfPosts = JSON.parse(this.responseText).data.children;
+  for (let i = 0; i < arrayOfPosts.length; i++) {
+    let permalink = arrayOfPosts[i].data.permalink;
+    console.log(`http://www.reddit.com${permalink}.json`);
+  }
 
   let response = document.getElementById('response');
   response.innerHTML = 'COMMENT';
