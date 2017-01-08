@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Lato', sans-serif;
+  background-color: #800909;
+  color: white; }
+  body button {
+    color: white;
+    background-color: #1a2b2b;
+    border: none;
+    border-radius: 8px;
+    font-size: 2em;
+    padding: 15px; }
+
+#header {
+  background-color: #661111;
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px; }
+  #header h1 {
+    width: 90%;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Oswald', sans-serif; }
+
+#left {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-family: 'Lato', sans-serif; }
+  #left #postTitle {
+    flex: 0 0 auto;
+    order: 1;
+    align-self: center;
+    width: 90%;
+    height: 50px;
+    margin-top: 25px;
+    font-size: 2em; }
+  #left #postContent {
+    justify-content: center;
+    flex: 0 0 auto;
+    order: 2;
+    align-self: center;
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 2em; }
+  #left #postComments {
+    justify-content: center;
+    flex: 0 0 auto;
+    order: 2;
+    align-self: center;
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 2em; }
+  #left #generate {
+    flex: 0 0 auto;
+    order: 3;
+    align-self: center;
+    width: 25%;
+    margin: 10px 0; }
+
+#content {
+  flex: 0 0 auto;
+  align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 90%;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  padding-top: 100px; }
+  #content #title {
+    flex: 0 0 90%;
+    order: 2;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    margin: 15px 0;
+    width: 100%; }
+  #content #img, #content #pic {
+    flex: 0 0 auto;
+    order: 1;
+    align-self: center;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px; }
+  #content #subtitle {
+    flex: 0 0 90%;
+    order: 3;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px; }
+  #content #comments {
+    flex: 0 0 90%;
+    order: 4;
+    line-height: 1.5em;
+    margin-bottom: 25px; }
+
+#four-oh-four {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em; }
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }

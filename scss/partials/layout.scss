@@ -1,0 +1,163 @@
+body{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
+	font-family: 'Lato', sans-serif;
+	background-color: rgb(128, 9, 9);
+	color: rgb(255,255,255);
+
+	button{
+		color: rgb(255, 255, 255);
+		background-color: rgb(26, 43, 43);
+		border: none;
+		border-radius: 8px;
+		font-size: 2em;
+		padding: 15px;
+	}
+}
+
+#header{
+	background-color: rgb(102, 17, 17);
+	flex: 0 0 auto;
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+
+	h1{
+		width: 90%;
+		text-align: center;
+		font-size: 5em;
+		font-family: 'Oswald', sans-serif;
+	}
+}
+
+//dropdowns and generate button
+#left{
+	flex: 0 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	font-family: 'Lato', sans-serif;
+
+	//dropdown for title selection
+	#postTitle{
+		//flex for child of #left
+		flex: 0 0 auto;
+		order: 1;
+		align-self: center;
+		width: 90%;
+		height: 50px;
+		margin-top: 25px;
+
+		font-size: 2em;
+	}
+
+	//dropdown for content selection
+	#postContent{
+		//flex for child of #left
+		justify-content: center;
+		flex: 0 0 auto;
+		order: 2;
+
+		align-self: center;
+		width: 90%;
+		height: 50px;
+		margin-top: 10px;
+		
+		font-size: 2em;
+	}
+
+	#postComments{
+		//flex for child of #left
+		justify-content: center;
+		flex: 0 0 auto;
+		order: 2;
+
+		align-self: center;
+		width: 90%;
+		height: 50px;
+		margin-top: 10px;
+		
+		font-size: 2em;
+	}
+
+	#generate{
+		//flex
+		flex: 0 0 auto;
+		order: 3;
+		align-self: center;
+
+		//placement
+		width: 25%;
+		margin: 10px 0;
+	}
+}
+
+//content generated from reddit
+#content{
+	flex: 0 0 auto;
+	align-self: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: 90%;
+	font-family: 'Lato', sans-serif;
+	font-size: 2em;
+	padding-top: 100px;
+
+	#title{
+		//flex for child of #content
+		flex: 0 0 90%;
+		order: 2;
+
+		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		font-size: 3em;
+		margin: 15px 0;
+		width: 100%;
+	}
+
+	#img, #pic{
+		flex: 0 0 auto;
+		order: 1;
+		align-self: center;
+
+		width: 90%;
+		height: auto;
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 50px;
+	}
+
+	#subtitle{
+		flex: 0 0 90%;
+		order: 3;
+		margin: 5px 0;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 100px;
+	}
+
+	#comments{
+		flex: 0 0 90%;
+		order: 4;
+
+		line-height: 1.5em;
+		margin-bottom: 25px;
+	}
+}
+
+//404.html styling
+#four-oh-four{
+	font-family: 'Oswald', sans-serif;
+	font-size: 3em;
+}
+
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+}
