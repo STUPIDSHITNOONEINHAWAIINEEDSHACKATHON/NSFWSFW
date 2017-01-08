@@ -16,8 +16,9 @@ body {
   height: 75px; }
   #header h1 {
     background-color: pink;
-    width: 25%;
-    height: 25px; }
+    width: 90%;
+    text-align: center;
+    font-size: 3em; }
 
 #left {
   background-color: white;
@@ -51,7 +52,7 @@ body {
   align-self: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 90%; }
   #content #title {
     background-color: red;
@@ -61,7 +62,7 @@ body {
   #content #img {
     flex: 0 0 auto;
     order: 2;
-    align-content: center;
+    align-self: center;
     width: 90%;
     height: auto; }
   #content #author {

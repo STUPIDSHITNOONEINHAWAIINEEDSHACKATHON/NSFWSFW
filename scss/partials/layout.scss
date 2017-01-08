@@ -18,11 +18,17 @@ body{
 
 	h1{
 		background-color: pink;
-		width: 25%;
-		height: 25px;
+		width: 90%;
+		text-align: center;
+		font-size: 3em;
+
+		@include respond-to('medium'){
+		font-size: 20em;
+		}
 	}
 }
 
+//dropdowns and generate button
 #left{
 	background-color: white;
 	flex: 0 0 auto;
@@ -65,13 +71,14 @@ body{
 	}
 }
 
+//content generated from reddit
 #content{
 	background-color: blue;
 	flex: 0 0 auto;
 	align-self: center;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-around;
 	width: 90%;
 
 	#title{
@@ -87,7 +94,7 @@ body{
 	#img{
 		flex: 0 0 auto;
 		order: 2;
-		align-content: center;
+		align-self: center;
 
 		width: 90%;
 		height: auto;
