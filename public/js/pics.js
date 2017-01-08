@@ -45,5 +45,4 @@ function picListener(data) {
     console.log(picsArray);
   }
 }
-picListener();
 

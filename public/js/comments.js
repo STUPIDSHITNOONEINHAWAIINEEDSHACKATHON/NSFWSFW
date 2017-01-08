@@ -1,24 +1,21 @@
 //jshint esversion:6
 
-var subName = document.getElementById('userInput');
-console.log();
-document.getElementById('submit').addEventListener('click', subLoader);
+function getComments(subName, callback) {
 
-function subLoader () {
+function subLoader(subName, callback) {
 
-  let subreddit = subName.value;
+  let subreddit = subName;
 
   var oReq = new XMLHttpRequest();
-  oReq.addEventListener('load', permalinksGenerator);
+  oReq.addEventListener('load', function() {permalinksGenerator(callback, this.responseText)});
   oReq.open('GET', `https://www.reddit.com/r/${subreddit}.json`);
   oReq.send();
 
 }
 
-function permalinksGenerator(){
+function permalinksGenerator(callback, responseText){
   let permalinksArray = [];
-  let arrayOfPosts = JSON.parse(this.responseText).data.children;
-  console.log('#1:', JSON.parse(this.responseText));
+  let arrayOfPosts = JSON.parse(responseText).data.children;
   for (let i = 0; i < arrayOfPosts.length; i++) {
     let permalink = arrayOfPosts[i].data.permalink;
     let commentsJSON = `http://www.reddit.com${permalink}.json`;
@@ -26,29 +23,27 @@ function permalinksGenerator(){
   }
    
   let randomPermalink = permalinksArray[Math.floor(Math.random() * permalinksArray.length)];
-  console.log(randomPermalink);
 
   var oReq2 = new XMLHttpRequest();
-  oReq2.addEventListener('load', commentsGenerator);
+  oReq2.addEventListener('load', function() {commentsGenerator(callback, this.responseText)});
   oReq2.open('GET', `${randomPermalink}`);
   oReq2.send();
 }
 
-function commentsGenerator(){
+function commentsGenerator(callback, responseText){
 
   let commentsArray = [];
 
-  let arrayOfComments = JSON.parse(this.responseText)[1].data.children;
-  console.log(arrayOfComments);
+  let arrayOfComments = JSON.parse(responseText)[1].data.children;
   
   for (let i = 0; i < arrayOfComments.length; i++){
     commentsArray[i] = arrayOfComments[i].data.body;
   }
+  callback(commentsArray);
+}
 
-  console.log(commentsArray);
+subLoader(subName, callback);
 
-  let response = document.getElementById('response');
-  response.innerHTML = `${commentsArray}`;
 }
 
 // module.exports = 'comments';
