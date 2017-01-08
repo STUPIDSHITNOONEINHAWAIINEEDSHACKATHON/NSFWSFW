@@ -40,6 +40,9 @@ const app = express();
   app.get('/public/js/time.js', function (req, res) {
     res.sendFile( __dirname + '/public/js/time.js')
   });
+  app.get('/public/maxresdefault.jpg', function (req, res) {
+    res.sendFile( __dirname + '/public/maxresdefault.jpg')
+  });
 
   app.post( '/', function (req, res) {
     console.log('response', req.body)
