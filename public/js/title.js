@@ -1,16 +1,16 @@
 // jshint esversion: 6
 
-function getTitle(sub) {
+function getTitle(sub, callback) {
 
   let titleArr = [];
 
   const oReq = new XMLHttpRequest();
-  oReq.addEventListener("load", getData);
+  oReq.addEventListener("load", function() {getData(callback, this.responseText)});
   oReq.open("GET", `https://www.reddit.com/r/${sub}/.json`);
   oReq.send();
 
-  function getData() {
-    let subReddit = JSON.parse(this.responseText);
+  function getData(callback, responseText) {
+    let subReddit = JSON.parse(responseText);
     let data = subReddit.data.children;
 
     for(let i = 0; i < data.length; i++) {
@@ -28,5 +28,8 @@ function getTitle(sub) {
         "time": calcTimeDiffOf(time)
       });
     } 
+
+    callback(titleArr);
+
   }
 }
