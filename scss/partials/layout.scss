@@ -107,6 +107,7 @@ body{
 	width: 90%;
 	font-family: 'Lato', sans-serif;
 	font-size: 2em;
+	padding-top: 100px;
 
 	#title{
 		//flex for child of #content
@@ -129,14 +130,16 @@ body{
 		height: auto;
 		display: flex;
 		justify-content: space-around;
+		padding-bottom: 50px;
 	}
 
 	#subtitle{
-		flex: 0 0 40%;
+		flex: 0 0 90%;
 		order: 3;
 		margin: 5px 0;
 		display: flex;
 		justify-content: space-around;
+		margin-bottom: 100px;
 	}
 
 	#comments{
