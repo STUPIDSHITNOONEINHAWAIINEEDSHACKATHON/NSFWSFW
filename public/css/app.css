@@ -52,6 +52,15 @@ body {
     height: 50px;
     margin-top: 10px;
     font-size: 2em; }
+  #left #postComments {
+    justify-content: center;
+    flex: 0 0 auto;
+    order: 2;
+    align-self: center;
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 2em; }
   #left #generate {
     flex: 0 0 auto;
     order: 3;
@@ -74,17 +83,22 @@ body {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-size: 3em;
-    margin: 15px 0; }
-  #content #img {
+    margin: 15px 0;
+    width: 100%; }
+  #content #img, #content #pic {
     flex: 0 0 auto;
     order: 1;
     align-self: center;
     width: 90%;
-    height: auto; }
-  #content #author {
-    flex: 0 0 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-around; }
+  #content #subtitle {
+    flex: 0 0 40%;
     order: 3;
-    margin: 5px 0; }
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around; }
   #content #comments {
     flex: 0 0 90%;
     order: 4;

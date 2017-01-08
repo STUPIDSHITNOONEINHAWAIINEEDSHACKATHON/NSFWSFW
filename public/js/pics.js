@@ -26,7 +26,7 @@ function getPics(data, callback) {
     function checkLink(URL) {
       let ok = true;
       let addExt = true;
-      var blackList = ['imageflake.com', 'gfycat', 'thnk1994.com', 'youtube.com', 'youtu.be', 'docs.google.com', 'flickr', 'instagram', '500px', 'pinkbike', '/a/', '/gallery/', '/r/'];
+      var blackList = ['imageflake.com', 'gfycat', 'thnk1994.com', 'youtube.com', 'youtu.be', 'docs.google.com', 'flickr', 'instagram', '500px', 'pinkbike', '/a/', '/gallery/', '/r/', 'u733xgniu4jx'];
       var whiteList = ['reddituploads', '.png', '.jpg', '.jpeg', '.gif'];
       whiteList.map(str => {
         if((URL.indexOf(str) > -1)?(true):(false)) {
