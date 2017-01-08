@@ -1,13 +1,13 @@
 /*jshint esversion: 6 */
-function picListener(data) {
+function getPics(data, callback) {
 
   let oReq = new XMLHttpRequest();
-  oReq.addEventListener('load', getPics);
+  oReq.addEventListener('load', function() {getPics(callback, this.responseText)});
   oReq.open('GET', 'https://www.reddit.com/r/SFWporn/.json');
   oReq.send();
 
-  function getPics(){
-    var myData = JSON.parse(this.responseText);
+  function getPics(callback, responseText){
+    var myData = JSON.parse(responseText);
     myData = myData.data.children;
     var picsArray = [];
 
@@ -42,7 +42,7 @@ function picListener(data) {
       if(ok) { picsArray.push(URL); }
     }
 
-    console.log(picsArray);
+    callback(picsArray);
   }
 }
 
