@@ -77,7 +77,8 @@ body {
   width: 90%;
   font-family: 'Lato', sans-serif;
   font-size: 2em;
-  padding-top: 100px; }
+  padding-top: 100px;
+  margin-bottom: 200px; }
   #content #title {
     flex: 0 0 90%;
     order: 2;

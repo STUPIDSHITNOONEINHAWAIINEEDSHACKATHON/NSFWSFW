@@ -1,9 +1,9 @@
 /*jshint esversion: 6 */
-function getPics(data, callback) {
+function getPics(sub, callback) {
 
   let oReq = new XMLHttpRequest();
   oReq.addEventListener('load', function() {getPics(callback, this.responseText)});
-  oReq.open('GET', 'https://www.reddit.com/r/SFWporn/.json');
+  oReq.open('GET', `https://www.reddit.com/r/${sub}/.json`);
   oReq.send();
 
   function getPics(callback, responseText){
@@ -39,7 +39,7 @@ function getPics(data, callback) {
         }
       });
       if(addExt) { URL += '.png'; }
-      if(ok) { picsArray.push(URL); }
+      if(ok) { picsArray.push(URL.split('gifv').join('gif')); }
     }
 
     callback(picsArray);
