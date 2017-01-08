@@ -56,7 +56,8 @@ body {
     height: 25px;
     margin: 5px 0;
     padding-bottom: 30px;
-    font-size: 1em; }
+    font-size: 1em;
+    background-color: white; }
 
 #content {
   flex: 0 0 auto;
