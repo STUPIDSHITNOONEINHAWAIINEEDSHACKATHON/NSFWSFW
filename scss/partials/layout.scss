@@ -1,9 +1,20 @@
 body{
-	background-color: pink;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
 	align-content: center;
+	font-family: 'Lato', sans-serif;
+
+	h2{
+		font-family: 'Oswald', sans-serif;
+	}
+
+	button{
+		background-color: green;
+		border: none;
+		border-radius: 8px;
+		padding: 15px 32px;
+	}
 }
 
 #header{
@@ -17,14 +28,10 @@ body{
 	height: 75px;
 
 	h1{
-		background-color: pink;
 		width: 90%;
 		text-align: center;
 		font-size: 3em;
-
-		@include respond-to('medium'){
-		font-size: 20em;
-		}
+		font-family: 'Oswald', sans-serif;
 	}
 }
 
@@ -35,6 +42,7 @@ body{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	font-family: 'Lato', sans-serif;
 
 	//dropdown for title selection
 	#postTitle{
@@ -44,8 +52,10 @@ body{
 		flex: 0 0 auto;
 		order: 1;
 
-		width: 90%;
 		align-self: center;
+		width: 90%;
+		height: 25px;
+		margin-top: 5px;
 	}
 
 	//dropdown for content selection
@@ -57,38 +67,46 @@ body{
 		flex: 0 0 auto;
 		order: 2;
 
-		width: 90%;
 		align-self: center;
+		width: 90%;
+		height: 25px;
+		margin-top: 5px;
+		
 	}
 
 	#generate{
-		background-color: lime;
+		//flex
 		flex: 0 0 auto;
 		order: 3;
-
-		width: 90%;
 		align-self: center;
+
+		//placement
+		width: 25%;
+		height: 25px;
+		margin: 5px 0;
+		padding-bottom: 25px;
 	}
 }
 
 //content generated from reddit
 #content{
-	background-color: blue;
 	flex: 0 0 auto;
 	align-self: center;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	width: 90%;
+	font-family: 'Lato', sans-serif;
 
 	#title{
-		background-color: red;
-
 		//flex for child of #content
 		flex: 0 0 90%;
 		order: 1;
 
 		text-align: center;
+		font-family: 'Oswald', sans-serif;
+		font-size: 2em;
+		margin: 15px 0 5px 0;
 	}
 
 	#img{
@@ -101,15 +119,17 @@ body{
 	}
 
 	#author{
-		background-color: brown;
 		flex: 0 0 90%;
 		order: 3;
+		margin: 5px 0;
 
 	}
 
 	#comments{
-		background-color: orange;
 		flex: 0 0 90%;
 		order: 4;
+
+		line-height: 1.5em;
+		margin-bottom: 25px;
 	}
 }
