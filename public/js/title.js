@@ -10,8 +10,8 @@ function getTitle(sub) {
   oReq.send();
 
   function getData() {
-    let watchPeopleDie = JSON.parse(this.responseText);
-    let data = watchPeopleDie.data.children;
+    let subReddit = JSON.parse(this.responseText);
+    let data = subReddit.data.children;
 
     for(let i = 0; i < data.length; i++) {
       let post = data[i].data;
