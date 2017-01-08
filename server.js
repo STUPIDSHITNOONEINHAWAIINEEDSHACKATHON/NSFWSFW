@@ -37,6 +37,10 @@ const app = express();
     res.sendFile( __dirname + '/public/js/comments.js')
   });
 
+  app.get('/public/js/time.js', function (req, res) {
+    res.sendFile( __dirname + '/public/js/time.js')
+  });
+
   app.post( '/', function (req, res) {
     console.log('response', req.body)
     res.end();

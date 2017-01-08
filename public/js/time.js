@@ -29,5 +29,3 @@ function calcTimeDiffOf(postTime) {
 	}
 	return str + ' ago';
 }
-
-module.exports = calcTimeDiffOf;
