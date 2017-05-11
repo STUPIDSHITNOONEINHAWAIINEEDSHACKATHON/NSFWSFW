@@ -18,7 +18,7 @@ function permalinksGenerator(callback, responseText){
   let arrayOfPosts = JSON.parse(responseText).data.children;
   for (let i = 0; i < arrayOfPosts.length; i++) {
     let permalink = arrayOfPosts[i].data.permalink;
-    let commentsJSON = `http://www.reddit.com${permalink}.json`;
+    let commentsJSON = `https://www.reddit.com${permalink}.json`;
     permalinksArray[i] = commentsJSON;
   }
    
